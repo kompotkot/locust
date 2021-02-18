@@ -9,6 +9,7 @@ from typing import Any, Dict, Optional
 
 from . import git
 from . import parse
+from . import push
 from . import render
 from . import version
 
@@ -20,6 +21,7 @@ def generate_argument_parser() -> argparse.ArgumentParser:
     )
     git.populate_argument_parser(parser)
     parse.populate_argument_parser(parser)
+    push.populate_argument_parser(parser)
     render.populate_argument_parser(parser)
     parser.add_argument(
         "-o",
